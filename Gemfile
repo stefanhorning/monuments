@@ -35,6 +35,7 @@ gem 'turbolinks'
 group :development, :test do
   gem 'rspec-rails'
   gem 'byebug'
+  gem 'database_cleaner', require: false
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
