@@ -44,6 +44,6 @@ class User
   field :role, type: String
 
   validates_presence_of :email
-  validates_presence_of :role
+#  validates_presence_of :role
   index({ email: 1 }, { unique: true })
 end
