@@ -29,6 +29,7 @@ gem 'turbolinks'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'rspec-rails'
   gem 'byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
