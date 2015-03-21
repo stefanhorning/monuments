@@ -6,4 +6,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def check_permissions
     authorize! :create, resource
   end
+
+  def sign_up(resource_name, resource)
+    # No sing_in (user are created by admin, which should stay logged in after)
+  end
 end
