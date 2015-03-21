@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user! 
+  before_action :load_user, only: :create
   load_and_authorize_resource
 
   def index
@@ -42,6 +43,11 @@ class UsersController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_user
     @user = User.find(params[:id])
+  end
+
+  def load_user
+    # CanCan fix for extra params
+    @user = User.new(user_params)
   end
 
   # Only allow a trusted parameter "white list" through.

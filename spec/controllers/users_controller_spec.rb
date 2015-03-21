@@ -12,9 +12,9 @@ RSpec.describe UsersController, :type => :controller do
     name: "Some Name",
     password: "1234ABCD",
     password_confirmation: "1234ABCD",
-    role: "user",
+#    role: "user",
   } }
-  let(:invalid_attributes)  { { email: nil, password: nil, role: nil} }
+  let(:invalid_attributes)  { { email: nil, password: nil} }
   let(:valid_session)       { {} }
 
   describe "GET index" do
