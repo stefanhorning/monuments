@@ -10,7 +10,7 @@ class Ability
     elsif user.role == 'user'
       can :manage, [Albums, Photos]
     else
-      can :read, [Welcome]
+      # can :read, [Welcome]
     end
     #
     # The first argument to `can` is the action you are giving the user 
