@@ -2,15 +2,26 @@ require 'rails_helper'
 
 RSpec.describe UsersController, :type => :controller do
 
-  let(:valid_attributes)    { { email: "some@email.com", name: "Some Name"} }
-  let(:invalid_attributes)  { { bullshit: "Test", email: nil} }
+  before(:each) do
+    user = FactoryGirl.create(:user)
+    sign_in user
+  end
+
+  let(:valid_attributes) { { 
+    email: "some@email.com",
+    name: "Some Name",
+    password: "1234ABCD",
+    password_confirmation: "1234ABCD",
+    role: "user",
+  } }
+  let(:invalid_attributes)  { { email: nil, password: nil, role: nil} }
   let(:valid_session)       { {} }
 
   describe "GET index" do
     it "assigns all users as @users" do
       user = User.create! valid_attributes
       get :index, {}, valid_session
-      expect(assigns(:users)).to eq([user])
+      expect(assigns(:users)).to include(user)
     end
   end
 

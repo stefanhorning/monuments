@@ -4,6 +4,7 @@ gem 'rails', '4.2.1'
 gem 'mongoid', '~> 4.0.0'
 gem 'bson_ext'
 gem 'haml-rails', '~> 0.9'
+gem 'devise'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -34,6 +35,7 @@ gem 'turbolinks'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
   gem 'byebug'
   gem 'database_cleaner', require: false
 
