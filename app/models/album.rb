@@ -3,6 +3,7 @@ class Album
   include Mongoid::Timestamps
 
   field :name, type: String
+  has_many :photos
 
   validates_presence_of :name
   belongs_to :user
