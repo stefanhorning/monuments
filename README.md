@@ -5,7 +5,7 @@ A photo webapp, based on Rails with user authentication and authorisation. Desig
 
 Uitlized MongoDB for photo storage (GridFS) as well as for the user models/album relations.
 
-# Development Setup
+## Development Setup
 1. Install mongo on your system
 2. Install ruby-2.2.1
 3. Clone repo, change into it and bundle
