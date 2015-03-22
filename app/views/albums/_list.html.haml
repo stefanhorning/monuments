@@ -18,4 +18,4 @@
           = link_to("Delete", album_path(album), method: :delete,
             data: { confirm: 'Are you sure?' }, class: 'btn btn-mini btn-danger') if can?(:delete, album)
 
-= link_to("New", new_album_path, class: 'btn btn-primary') if can?(:create, @albums)
+= link_to("New", new_album_path, class: 'btn btn-primary') if can?(:create, Album)

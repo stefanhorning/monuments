@@ -11,15 +11,16 @@ gem 'devise',     '~> 3.4.1'
 gem 'haml-rails', '~> 0.9'
 gem 'jquery-rails'
 
-group :assets do
+
+#group :assets do
   gem 'coffee-rails', '~> 4.1.0'
-  gem 'less-rails',   '~> 2.3.3'
   gem 'sass-rails',   '~> 5.0.1'
   gem 'therubyracer', platforms: :ruby
+  gem 'less-rails',   '~> 2.3.3'
   gem 'turbolinks'
   gem 'twitter-bootstrap-rails', '~> 2.2.8'
   gem 'uglifier',     '~> 1.3.0'
-end
+#end
 
 group :development, :test do
   gem 'rspec-rails',  '~> 3.0.2'

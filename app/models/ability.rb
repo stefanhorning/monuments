@@ -8,7 +8,8 @@ class Ability
     if user.role == 'admin'
       can :manage, :all
     elsif user.role == 'user'
-      can :manage, Album, user_id: user.id
+      can :create, [Album, Photo]
+      can [:update, :destroy], Album, user_id: user.id
       can :read, :all
     else
       can :read, Album, public: true

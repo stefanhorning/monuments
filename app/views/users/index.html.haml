@@ -21,4 +21,4 @@
           = link_to("Delete", user_path(user), method: :delete,
             data: { :confirm => 'Are you sure?' }, class: 'btn btn-mini btn-danger') if can?(:delete, user)
 
-= link_to("New", new_user_path, class: 'btn btn-primary') if can?(:create, @users)
+= link_to("New", new_user_path, class: 'btn btn-primary') if can?(:create, User)
