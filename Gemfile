@@ -6,6 +6,7 @@ gem 'bson_ext' # Speeds up BSON serialization
 
 gem 'cancan',     '~> 1.6.10'
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
+gem 'mini_magick', require: 'carrierwave/processing/mini_magick'
 gem 'devise',     '~> 3.4.1'
 gem 'haml-rails', '~> 0.9'
 gem 'jquery-rails'
