@@ -29,9 +29,9 @@
           %a.brand(href="/") Monuments
           .container.nav-collapse
             %ul.nav
+              %li= link_to "Public Stream", "/"
               %li= link_to "Albums", albums_path
               %li= link_to "Users", users_path
-              %li= link_to "Link 3", "#"
             .nav.navbar-form.pull-right
               %small
                 - if user_signed_in?

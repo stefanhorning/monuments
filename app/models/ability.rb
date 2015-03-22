@@ -11,7 +11,7 @@ class Ability
       can :manage, Album, user_id: user.id
       can :read, :all
     else
-      # can :read, [Welcome]
+      can :read, Album, public: true
     end
     #
     # The first argument to `can` is the action you are giving the user 
