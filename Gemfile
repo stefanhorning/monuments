@@ -1,51 +1,28 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.1'
-gem 'mongoid', '~> 4.0.0'
-gem 'bson_ext'
-gem 'haml-rails', '~> 0.9'
-gem 'devise', '~> 3.4.1'
-gem 'cancan'
+gem 'rails',    '4.2.1'
+gem 'mongoid',  '~> 4.0.0'
+gem 'bson_ext' # Speeds up BSON serialization
 
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
-
+gem 'cancan',     '~> 1.6.10'
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
-
-# See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
-gem 'less-rails'
-gem 'twitter-bootstrap-rails'
-
-# Use jquery as the JavaScript library
+gem 'devise',     '~> 3.4.1'
+gem 'haml-rails', '~> 0.9'
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-# gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'byebug'
-  gem 'database_cleaner', require: false
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+group :assets do
+  gem 'coffee-rails', '~> 4.1.0'
+  gem 'less-rails',   '~> 2.3.3'
+  gem 'sass-rails',   '~> 5.0.1'
+  gem 'therubyracer', platforms: :ruby
+  gem 'turbolinks'
+  gem 'twitter-bootstrap-rails', '~> 2.2.8'
+  gem 'uglifier',     '~> 1.3.0'
 end
 
+group :development, :test do
+  gem 'rspec-rails',  '~> 3.0.2'
+  gem 'database_cleaner', require: false
+  gem 'factory_girl_rails'
+  gem 'pry-byebug', require: :false
+end
