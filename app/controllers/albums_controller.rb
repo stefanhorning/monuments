@@ -50,6 +50,6 @@ class AlbumsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def album_params
-    params.require(:album).permit(:name).merge(user_id: current_user.id)
+    params.require(:album).permit(:name, :public).merge(user_id: current_user.id)
   end
 end

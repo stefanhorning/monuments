@@ -1,18 +1,18 @@
 - model_class = Album
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+  %h1 My Albums
 %table.table.table-striped
   %thead
     %tr
-      %th= model_class.human_attribute_name(:id)
       %th= model_class.human_attribute_name(:name)
+      %th= model_class.human_attribute_name(:public)
       %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     - @albums.each do |album|
       %tr
-        %td= link_to album.id, album_path(album)
-        %td= album.name
+        %td= link_to album.name, album_path(album)
+        %td= album.public ? "Yes" : "No"
         %td=l album.created_at
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")), edit_album_path(album), :class => 'btn btn-mini'

@@ -1,6 +1,6 @@
 - model_class = Album
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human.titleize
+  %h1= "Album: #{@album.name}"
 
 %p
   %strong= model_class.human_attribute_name(:name) + ':'
@@ -10,6 +10,10 @@
   %strong= model_class.human_attribute_name(:user) + ':'
   %br
   = @album.user.email
+%p
+  %strong= model_class.human_attribute_name(:public) + ':'
+  %br
+  = @album.public ? "Yes" : "No" 
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), albums_path, :class => 'btn'
